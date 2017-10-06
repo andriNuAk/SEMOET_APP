@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardListTryout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="#ededed"
+    android:orientation="vertical"
+    card_view:cardBackgroundColor="#d6d6d6"
+    card_view:cardCornerRadius="0.5dp"
+    android:layout_marginBottom="5dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnLihatNilai"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Lihat Nilai"
+            android:background="@drawable/rounded_button_gren"
+            android:textSize="10dp"
+            android:textColor="#ededed"
+            android:layout_below="@+id/imageView2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp"/>
+
+        <Button
+            android:id="@+id/btnPembahasan"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Lihat Pembahasan"
+            android:textSize="10dp"
+            android:textColor="#ededed"
+            android:background="@drawable/rounded_button_blue"
+            android:layout_below="@+id/btnLihatNilai"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp"/>
+
+        <TextView
+            android:id="@+id/txtNamaTryout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_toEndOf="@+id/imageView2"
+            android:textColor="#696969"
+            />
+
+        <TextView
+            android:id="@+id/txtNamaPaket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/txtNamaTryout"
+            android:layout_toEndOf="@+id/imageView2"
+            android:textColor="#696969"/>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:tint="@color/colorPrimary"
+            card_view:srcCompat="@drawable/ic_mode_edit_black_24dp" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

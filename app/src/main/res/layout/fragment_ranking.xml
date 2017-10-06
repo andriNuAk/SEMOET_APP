@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="vortex.semoet.RankingFragment"
+    android:background="#ededed">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:id="@+id/scrlView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ededed">
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:id="@+id/cardTextRanking">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ini adalah nilai tryout tertinggi dan terendah sekolah kamu"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView3" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/colorPrimary"
+                        android:layout_centerVertical="true"
+                        card_view:srcCompat="@drawable/ic_volume_down_black_24dp"  />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardRanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardTextRanking"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/txtSekolah"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="#696969"
+                        android:textSize="20dp" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/txtSekolah"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:id="@+id/row_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="20dp">
+
+                                <TextView
+                                    android:id="@+id/txtNamaPaketMaxSBMPTN"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+
+                                <TextView
+                                    android:id="@+id/txtNilaiMaxSBMPTN"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNamaPaketMaxSBMPTN"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="0"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="60dp" />
+
+                                <TextView
+                                    android:id="@+id/txtNamaSiswaMaxSBMPTN"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNilaiMaxSBMPTN"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="20dp">
+
+                                <TextView
+                                    android:id="@+id/txtNamaPaketMaxUNBK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+
+                                <TextView
+                                    android:id="@+id/txtNilaiMaxUNBK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNamaPaketMaxUNBK"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="0"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="60dp" />
+
+                                <TextView
+                                    android:id="@+id/txtNamaSiswaMaxUNBK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNilaiMaxUNBK"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="20dp">
+
+                                <TextView
+                                    android:id="@+id/txtNamaPaketMinSBMPTN"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+
+                                <TextView
+                                    android:id="@+id/txtNilaiMinSBMPTN"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNamaPaketMinSBMPTN"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="0"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="60dp" />
+
+                                <TextView
+                                    android:id="@+id/txtNamaSiswaMinSBMPTN"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNilaiMinSBMPTN"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="20dp">
+
+                                <TextView
+                                    android:id="@+id/txtNamaPaketMinUNBK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+
+                                <TextView
+                                    android:id="@+id/txtNilaiMinUNBK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNamaPaketMinUNBK"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="0"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="60dp" />
+
+                                <TextView
+                                    android:id="@+id/txtNamaSiswaMinUNBK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtNilaiMinUNBK"
+                                    android:layout_centerHorizontal="true"
+                                    android:textColor="#e0e0e0" />
+                            </RelativeLayout>
+                        </TableRow>
+
+                    </TableLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        app:indicator="BallPulse"
+        app:indicator_color="@color/colorPrimaryDark"
+        />
+</RelativeLayout>

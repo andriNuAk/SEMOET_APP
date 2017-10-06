@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="vortex.semoet.PembahasanActivity"
+    tools:showIn="@layout/activity_pembahasan"
+    android:background="#ededed">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ini adalah pembahasan soal yang sudah kamu kerjakan"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView2"/>
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/colorPrimary"
+                        android:layout_centerVertical="true"
+                        card_view:srcCompat="@drawable/ic_volume_down_black_24dp" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardSoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:layout_below="@+id/cardText">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp">
+
+
+                    <TextView
+                        android:id="@+id/txtNoSoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Soal No. 1/3"
+                        android:textColor="#4d4d4d"
+                        android:layout_toRightOf="@+id/imageView3"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="#4d4d4d"
+                        card_view:srcCompat="@drawable/ic_insert_comment_black_24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="5dp"/>
+
+                    <katex.hourglass.in.mathlib.MathView
+                        android:id="@+id/txtSoal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:layout_below="@+id/imageView3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        app:setTextColor="@color/colorPrimaryDark"
+                        app:setTextSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/txtStatusAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/txtSoal"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_below="@+id/txtStatusAudio"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/linearMedia">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:id="@+id/btnDownload"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                card_view:srcCompat="@drawable/ic_file_download_black_24dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:id="@+id/btnPause"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                card_view:srcCompat="@drawable/ic_pause_black_24dp"
+                                android:layout_centerHorizontal="true"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:id="@+id/btnPlay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                card_view:srcCompat="@drawable/ic_play_arrow_black_24dp"
+                                android:layout_centerHorizontal="true"
+                                android:tint="@color/grey_dark"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:id="@+id/btnStop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                card_view:srcCompat="@drawable/ic_stop_black_24dp"
+                                android:layout_centerHorizontal="true"
+                                android:tint="#FF830002"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardJawaban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:layout_below="@+id/cardSoal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp">
+
+
+
+                    <TextView
+                        android:id="@+id/txtText2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilihan Jawaban"
+                        android:textColor="#4d4d4d"
+                        android:layout_toRightOf="@+id/imageView4"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15dp"/>
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="#4d4d4d"
+                        card_view:srcCompat="@drawable/ic_format_list_bulleted_black_24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtJawaban"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:layout_below="@+id/imageView4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#4d4d4d"/>
+
+                    <katex.hourglass.in.mathlib.MathView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtJawabanMathA"
+                        android:text="TextView"
+                        android:layout_below="@+id/imageView4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#4d4d4d"
+                        auto:engine="KaTeX"
+                        app:setTextColor="@color/colorPrimaryDark"
+                        app:setTextSize="20sp"
+                        />
+
+                    <katex.hourglass.in.mathlib.MathView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtJawabanMathB"
+                        android:text="TextView"
+                        android:layout_below="@+id/txtJawabanMathA"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#4d4d4d"
+                        auto:engine="KaTeX"
+                        app:setTextColor="@color/colorPrimaryDark"
+                        app:setTextSize="20sp"
+                        />
+
+                    <katex.hourglass.in.mathlib.MathView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtJawabanMathC"
+                        android:text="TextView"
+                        android:layout_below="@+id/txtJawabanMathB"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#4d4d4d"
+                        auto:engine="KaTeX"
+                        app:setTextColor="@color/colorPrimaryDark"
+                        app:setTextSize="20sp"
+                        />
+
+                    <katex.hourglass.in.mathlib.MathView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtJawabanMathD"
+                        android:text="TextView"
+                        android:layout_below="@+id/txtJawabanMathC"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#4d4d4d"
+                        auto:engine="KaTeX"
+                        app:setTextColor="@color/colorPrimaryDark"
+                        app:setTextSize="20sp"
+                        />
+
+                    <katex.hourglass.in.mathlib.MathView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtJawabanMathE"
+                        android:text="TextView"
+                        android:layout_below="@+id/txtJawabanMathD"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#4d4d4d"
+                        auto:engine="KaTeX"
+                        app:setTextColor="@color/colorPrimaryDark"
+                        app:setTextSize="20sp"
+                        />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardPembahasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:layout_below="@+id/cardJawaban">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="5dp">
+
+
+
+
+                    <TextView
+                        android:id="@+id/txtText3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pembahasan"
+                        android:textColor="#4d4d4d"
+                        android:layout_toRightOf="@+id/imageView5"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15dp"/>
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="#4d4d4d"
+                        card_view:srcCompat="@drawable/ic_mode_edit_black_24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="5dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/imageView5"
+                        android:id="@+id/relPembahasan">
+
+                        <ImageView
+                            android:id="@+id/imgPembahasan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:scaleType="center"
+                            card_view:srcCompat="@drawable/ic_arrow_forward_black_24dp" />
+
+                        <VideoView
+                            android:id="@+id/videoPembahasan"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"/>
+
+                        <TextView
+                            android:id="@+id/txtPembahasan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="TextView" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtJawabanBenar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:layout_below="@+id/relPembahasan"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/txtStatusJawaban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:layout_below="@+id/txtJawabanBenar"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"/>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relButton"
+                android:layout_below="@+id/cardPembahasan"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/txtLanjut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/btnLanjut"
+                    android:text="Soal selanjutnya"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:id="@+id/txtSebelum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/btnKembali"
+                    android:text="Soal sebelumnya"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <ImageButton
+                    android:id="@+id/btnLanjut"
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:srcCompat="@drawable/ic_arrow_forward_black_24dp"
+                    android:background="@drawable/rounded_button_blue"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:tint="#fff"
+                    android:layout_marginLeft="5dp"/>
+
+                <ImageButton
+                    android:padding="3dp"
+                    android:id="@+id/btnKembali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_button_blue"
+                    card_view:srcCompat="@drawable/ic_arrow_back_black_24dp"
+                    android:tint="#fff"
+                    android:layout_marginRight="5dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/relLoading">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avlLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="40dp"
+            android:visibility="visible"
+            app:indicator="BallSpinFadeLoader"
+            app:indicator_color="@color/colorPrimaryDark"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avlLoading"
+            android:layout_centerHorizontal="true"
+            android:text="Memuat .... "/>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

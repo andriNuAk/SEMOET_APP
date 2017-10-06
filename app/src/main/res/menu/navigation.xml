@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/navigation_ranking"
+        android:icon="@drawable/ic_insert_chart_black_24dp"
+        android:title="Ranking"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/navigation_daftar_tryout"
+        android:icon="@drawable/ic_mode_edit_black_24dp"
+        app:showAsAction="ifRoom"
+        android:title="Tryoutku" />
+
+    <item
+        android:id="@+id/navigation_logout"
+        android:icon="@drawable/ic_power_settings_new_black_24dp"
+        android:title="Logout"
+        app:showAsAction="ifRoom"
+        />
+
+
+
+</menu>
